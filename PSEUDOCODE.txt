@@ -1,0 +1,38 @@
+START
+
+CREATE an array containing Monday through Sunday
+
+CREATE an array containing the temperature for each day
+
+DISPLAY "Enter a day Monday through Sunday, or enter week"
+
+INPUT selection
+
+IF selection equals "week"
+    SET total to 0
+
+    FOR each position in the arrays
+        DISPLAY the day and its temperature
+        ADD the temperature to total
+    END FOR
+
+    SET average to total divided by the number of temperatures
+    DISPLAY the weekly average
+
+ELSE
+    SET found to false
+
+    FOR each position in the arrays
+        IF selection equals the day
+            DISPLAY the day and its temperature
+            SET found to true
+            STOP the loop
+        END IF
+    END FOR
+
+    IF found equals false
+        DISPLAY an invalid entry message
+    END IF
+END IF
+
+END
